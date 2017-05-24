@@ -66,7 +66,7 @@ function isReactComponentClass(path /*: Path */) {
   }
 
   throw superClass.buildCodeFrameError(
-    `Unexpected super class type: ${superClass.type}`,
+    `Unexpected super class type: ${superClass.type}`
   );
 }
 
