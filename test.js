@@ -63,6 +63,11 @@ pluginTester({
       output: `import React from "react";\nMATCHED;`,
     },
     {
+      title: 'match React if binding correct namespace import',
+      code: `import * as React from "react";\nclass Foo extends React.Component {}`,
+      output: `import * as React from "react";\nMATCHED;`,
+    },
+    {
       title: 'match React if binding correct named import',
       code: `import { Component } from "react";\nclass Foo extends Component {}`,
       output: `import { Component } from "react";\nMATCHED;`,

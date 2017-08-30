@@ -46,7 +46,7 @@ function isReactComponentClass(path /*: Path */) {
       if (object.node.name !== GLOBAL_NAME) return false;
     } else {
       if (binding.kind !== 'module') return false;
-      if (!binding.path.isImportDefaultSpecifier()) return false;
+      if (!binding.path.isImportDefaultSpecifier() && !binding.path.isImportNamespaceSpecifier()) return false;
       if (getSourceFromSpecifier(binding.path) !== MODULE_NAME) return false;
     }
 
